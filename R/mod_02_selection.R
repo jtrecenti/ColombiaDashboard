@@ -1,0 +1,94 @@
+#' 02_selection UI Function
+#'
+#' @description A shiny Module.
+#'
+#' @param id,input,output,session Internal parameters for {shiny}.
+#'
+#' @noRd 
+#'
+#' @importFrom shiny NS tagList 
+mod_02_selection_ui <- function(id){
+  ns <- NS(id)
+  shiny::tagList(
+    shiny::fluidPage(
+      shiny::verticalLayout(
+        shiny::splitLayout(
+
+          # named arguments
+          cellWidths = c('49%', '49%'),
+          style = 'border: 1px solid silver;',
+          cellArgs = list(
+            style = paste(
+              'white-space: normal',
+              'text-align: justify',
+              'align: center',
+              'padding: 10px',
+              sep = '; '
+            )
+          ),
+
+          # content
+          shiny::plotOutput(ns('plot01')),
+          shiny::htmlOutput(ns('text01'))
+
+        ),
+        shiny::br(),
+        shiny::splitLayout(
+
+          # named arguments
+          cellWidths = c('49%', '49%'),
+          style = 'border: 1px solid silver;',
+          cellArgs = list(
+            style = paste(
+              'white-space: normal',
+              'text-align: justify',
+              'align: center',
+              'padding: 10px',
+              sep = '; '
+            )
+          ),
+
+          # content
+          shiny::htmlOutput(ns('text02')),
+          shiny::plotOutput(ns('plot02'))
+
+        )
+      )
+    )
+  )
+}
+    
+#' 02_selection Server Function
+#'
+#' @noRd 
+mod_02_selection_server <- function(id){
+  shiny::moduleServer(id, function(input, output, session){
+
+    ns <- session$ns
+
+    output$plot01 <- shiny::renderPlot({
+      shinipsum::random_ggplot()
+    })
+
+    output$text01 <- shiny::renderText({
+      shinipsum::random_text(nwords = 200)
+    })
+
+    output$plot02 <- shiny::renderPlot({
+      shinipsum::random_ggplot()
+    })
+
+    output$text02 <- shiny::renderText({
+      shinipsum::random_text(nwords = 200)
+    })
+
+  })
+ 
+}
+    
+## To be copied in the UI
+# mod_02_selection_ui("02_selection_ui_1")
+    
+## To be copied in the server
+# callModule(mod_02_selection_server, "02_selection_ui_1")
+ 

@@ -31,8 +31,8 @@ golem::set_golem_options()
 usethis::use_mit_license()
 usethis::use_readme_rmd(open = FALSE)
 usethis::use_code_of_conduct()
-usethis::use_lifecycle_badge( 'Experimental' )
-usethis::use_news_md( open = FALSE )
+usethis::use_lifecycle_badge('Experimental')
+usethis::use_news_md(open = FALSE)
 
 ## Use git ----
 usethis::use_git()
@@ -40,6 +40,7 @@ usethis::use_git()
 ## Init Testing Infrastructure ----
 ## Create a template for tests
 golem::use_recommended_tests()
+usethis::use_test()
 
 ## Use Recommended Packages ----
 golem::use_recommended_deps()
@@ -56,5 +57,5 @@ golem::use_utils_server()
 # You're now set! ----
 
 # go to dev/02_dev.R
-rstudioapi::navigateToFile( 'dev/02_dev.R' )
+rstudioapi::navigateToFile('dev/02_dev.R')
 

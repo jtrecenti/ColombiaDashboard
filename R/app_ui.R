@@ -5,13 +5,65 @@
 #' @import shiny
 #' @noRd
 app_ui <- function(request) {
-  tagList(
+  shiny::tagList(
     # Leave this function for adding external resources
     golem_add_external_resources(),
+
     # List the first level UI elements here 
-    fluidPage(
-      h1("DiasporaSurveyResults")
-    )
+    shiny::navbarPage(
+      title = 'Colombia Survey Results',
+      shiny::tabsetPanel(
+        shiny::tabPanel(
+          title = 'Welcome',
+          shiny::br(),
+          mod_01_welcome_ui('01_welcome_ui_1')
+        ),
+        shiny::tabPanel(
+          title = 'Selection',
+          shiny::br(),
+          mod_02_selection_ui('02_selection_ui_1')
+        ),
+        shiny::tabPanel(
+          title = 'Demographics',
+          shiny::br(),
+          mod_03_demographics_ui('03_demographics_ui_1')
+        ),
+        shiny::tabPanel(
+          title = 'Experience',
+          shiny::br(),
+          mod_04_experience_ui('04_experience_ui_1')
+        ),
+        shiny::tabPanel(
+          title = 'Attachment',
+          shiny::br(),
+          mod_05_attachment_ui('05_attachment_ui_1')
+        ),
+        shiny::tabPanel(
+          title = 'Intent to Return',
+          shiny::br(),
+          mod_06_return_ui('06_return_ui_1')
+        ),
+        shiny::tabPanel(
+          title = 'Sense of Us',
+          shiny::br(),
+          mod_07_senseofus_ui('07_senseofus_ui_1')
+        ),
+        shiny::tabPanel(
+          title = 'Acknowledgements',
+          shiny::br(),
+          mod_08_acknowledgement_ui('08_acknowledgement_ui_1')
+        )
+      )
+    )#,
+
+    # create footer
+    # footer = bs4Dash::dashboardFooter(
+    #   copyrights = shiny::a(
+    #     href = 'https://growthlab.cid.harvard.edu',
+    #     target = '_blank', 'Harvard Growth Lab'
+    #   ),
+    #   right_text = '2021 | Developed by Harvard\'s CID Growth Lab'
+    # )
   )
 }
 
