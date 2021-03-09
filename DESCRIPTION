@@ -1,0 +1,13 @@
+Package: DiasporaSurveyResults
+Title: Colombia Diaspora Survey Results
+Version: 0.0.0.9000
+Authors@R: person('Andre', 'Assumpcao', email = 'andre.assumpcao@gmail.com', role = c('cre', 'aut'))
+Description: It creates the Colombia Survey Results Shiny.
+License: MIT + file LICENSE
+Imports: 
+    config,
+    golem,
+    shiny
+Encoding: UTF-8
+LazyData: true
+RoxygenNote: 6.1.1
