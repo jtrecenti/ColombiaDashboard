@@ -15,7 +15,7 @@ mod_01_welcome_ui <- function(id){
 
         # # named arguments
         cellWidths = c('30%', '70%'),
-x       cellArgs = list(
+        cellArgs = list(
           style = paste(
             'white-space: normal',
             'text-align: justify',
@@ -44,8 +44,8 @@ mod_01_welcome_server <- function(id){
     output$welcome_image <- renderImage({
 
       # shinipsum::random_image()
-      png(app_sys('app/www/flag.png'))
-      dev.off()
+      grDevices::png(app_sys('app/www/flag.png'))
+      grDevices::dev.off()
 
       # create list to return image
       list(

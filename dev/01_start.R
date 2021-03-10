@@ -14,7 +14,7 @@
 ## Fill the DESCRIPTION ----
 ## Add meta data about your application
 golem::fill_desc(
-  pkg_name = 'DiasporaSurveyResults',
+  pkg_name = 'ColombiaDashboard',
   pkg_title = 'Colombia Diaspora Survey Results',
   pkg_description = 'It creates the Colombia Survey Results Shiny.',
   author_first_name = 'Andre',

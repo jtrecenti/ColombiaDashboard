@@ -24,6 +24,7 @@ usethis::use_package('janitor')
 usethis::use_package('lmtest')
 usethis::use_package('magrittr')
 usethis::use_package('maps')
+usethis::use_package('readr')
 usethis::use_package('sandwich')
 usethis::use_package('treemapify')
 usethis::use_package('shinipsum')
@@ -53,8 +54,7 @@ golem::add_css_file('custom')
 
 ## Add internal datasets ----
 ## If you have data in your package
-usethis::use_data_raw(name = 'survey_data', open = FALSE)
-usethis::use_data(survey_data, overwrite = TRUE)
+usethis::use_data_raw(name = 'survey', open = FALSE)
 
 ## Tests ----
 ## Add one line by test you want to create
