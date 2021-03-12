@@ -13,7 +13,7 @@ Imports:
     DT (>= 0.17),
     glue (>= 1.4.2),
     htmltools (>= 0.5.1.1),
-    bs4Dash (>= 2.0.0.9000),
+    bs4Dash,
     ggalluvial (>= 0.12.3),
     ggrepel (>= 0.9.1),
     janitor (>= 2.1.0),
