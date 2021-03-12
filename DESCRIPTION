@@ -26,7 +26,7 @@ Imports:
     dplyr,
     shinipsum,
     rlang,
-    grDevice,
+    grDevices,
     readr,
     pkgload,
     cachem
