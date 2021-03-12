@@ -1,5 +1,5 @@
 name: myApp
-remote_url: 'https://rseis.shinyapps.io/colombia'
+remote_url: 'http://colombia.abj.org.br'
 auth0_config:
   api_url: "https://diaspora-survey.us.auth0.com"
   credentials:
